@@ -71,3 +71,4 @@ if (faveDessert === "yes" || faveDessert === "y"){
     // console.log("Nope, that's wrong!");
     alert("Nope, that's wrong!");
 }
+
