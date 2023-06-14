@@ -5,6 +5,7 @@ let userName = prompt("Please enter your name")
 // console.log(userName)
 alert("welcome, " + userName)
 
+let points = 0
 
 const myFaveColour = "green"
 
@@ -21,11 +22,12 @@ alert("cool, mine too!")
 let myFavePet = prompt("Is my favourite pet a dog? Please answer yes/no or y/n only")
 
 if(myFavePet === "yes" || myFavePet === "y") {
-  console.log("yes, I love dogs!")  
+//   console.log("Nope, it's a cat!")
+  alert("Nope, it's a cat!") 
 
 } else if(myFavePet === "no" || myFavePet === "n") {
-    // console.log("That's okay!") 
-    alert("That's okay!")
+    // console.log("sorry that's wrong!") 
+    alert("sorry that's wrong")
 
 } else {
     console.log("oops, the response to this question should be a yes or no")
@@ -72,3 +74,25 @@ if (faveDessert === "yes" || faveDessert === "y"){
     alert("Nope, that's wrong!");
 }
 
+const number = 5;
+console.log(number);
+let guess = prompt("guess a number between 1 and 10! You have 3 attempts");
+console.log(guess);
+for (let i = 2; i >= 0; i--) {
+  if (i === 0) {
+    alert("you're out of attempts! Better luck next time!");
+    break;
+}
+if (guess < number) {
+    alert("too low! guess again..");
+    guess = prompt("guess a number between 1 and 10! You have " + i + "attempts to guess the right number")
+    } else if (guess > number) {
+       alert("too high, guess again!"); 
+    guess = prompt("guess a number between 1 and 10! You have " + i + "attempts to guess the right number")
+    } else if (guess = number) {
+        points++;
+        console.log(points);
+        alert("congrats, you guessed the number!");
+        break;
+    }
+}
