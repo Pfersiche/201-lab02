@@ -27,7 +27,7 @@ if(myFavePet === "yes" || myFavePet === "y") {
 
 } else if(myFavePet === "no" || myFavePet === "n") {
     // console.log("sorry that's wrong!") 
-    alert("sorry that's wrong")
+    alert("That's right, it's a cat ^+^")
 
 } else {
     console.log("oops, the response to this question should be a yes or no")
@@ -96,6 +96,7 @@ if (guess < number) {
         break;
     }
 }
+// my numbers question seems to be accepting random non-numerical answers as correct and I don't know why, other than that it works
 
 const gradColour = ["purple", "pink", "orange"];
 
@@ -111,12 +112,12 @@ for (let i = 5; i >= 0; i--) {
     const attempts = i + 1;
 
 let answer = prompt(
-    "can you name one of the colours in my gradient? You have " + attempts + "attempts"
+    "can you name one of the colours in my gradient? You have " + attempts + " attempts"
 ).toLowerCase();
 
 for (let j = 0; j < gradColour.length; j++) {
     if (answer [j] === gradColour) {
-        alert ("well done" + answer[j], "is a correct answer!" );
+        alert ("well done " + answer[j], " is a correct answer!" );
         winner - !winner;
         console.log(winner);
         break;
@@ -124,7 +125,7 @@ for (let j = 0; j < gradColour.length; j++) {
 }
 
 if (!winner) {
-    alert("unfortunately" + answer + "is not a correct answer" );
+    alert("unfortunately " + answer + " is not a correct answer" );
 }
 
 if (i === 0 || winner) {
@@ -132,3 +133,6 @@ alert("the colours in my gradient are purple, pink, and orange");
 break;
  }
 }
+
+// unfortunately this question is still broken. it essentially runs, but some words are too close together in some of the alerts (I'm trying to fix this) 
+//and it's currently not accepted my given correct answers as correct answers. I'm clearly missing something pretty fundamental but idk what???
