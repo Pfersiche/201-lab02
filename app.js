@@ -33,17 +33,17 @@ if(myFavePet === "yes" || myFavePet === "y") {
     console.log("oops, the response to this question should be a yes or no")
 }
 
-let myFaveGame = prompt("Do you like Disco elysium?")
+let myFaveGame = prompt("Is Disco elysium my favourite game?")
 
 if(myFaveGame === "yes" || myFaveGame === "y") {
     // console.log("Great, that's my favourite game!")
     alert("Great, that's my favourite game!")
 } else if(myFaveGame === "no" || myFaveGame === "n") {
-    // console.log("That's okay!") 
-    alert("That's okay!")
+    // console.log("hmm guess again..!") 
+    alert("hmm guess again..")
 } else {
-    // console.log("That's okay! You should check it out some time") 
-    alert("That's okay! You should check it out some time")
+    // console.log("Please answer in the form yes/no or y/n") 
+    alert("Please answer in the form yes/no or y/n")
 
 }
 
@@ -52,7 +52,7 @@ let whereStudied = prompt("Did I study for my degree in Brighton?")
 if(whereStudied === "yes" || whereStudied === "y") {
     // console.log("That's right, I studied at the University of Brighton")
     alert("That's right, I studied at the University of Brighton")
-} else if(whereStudied === "no" || whereStudied === "y") {
+} else if(whereStudied === "no" || whereStudied === "n") {
     
 } else {
     // console.log("Answer should take the form of yes/no or y/n")
@@ -95,4 +95,40 @@ if (guess < number) {
         alert("congrats, you guessed the number!");
         break;
     }
+}
+
+const gradColour = ["purple", "pink", "orange"];
+
+// should i have in here something like: 
+console.log(gradColour[0]);
+console.log(gradColour[1]);
+console.log(gradColour[2]);
+
+for (let i = 5; i >= 0; i--) {
+    let winner = false;
+    console.log(winner);
+
+    const attempts = i + 1;
+
+let answer = prompt(
+    "can you name one of the colours in my gradient? You have " + attempts + "attempts"
+).toLowerCase();
+
+for (let j = 0; j < gradColour.length; j++) {
+    if (answer [j] === gradColour) {
+        alert ("well done" + answer[j], "is a correct answer!" );
+        winner - !winner;
+        console.log(winner);
+        break;
+    }
+}
+
+if (!winner) {
+    alert("unfortunately" + answer + "is not a correct answer" );
+}
+
+if (i === 0 || winner) {
+alert("the colours in my gradient are purple, pink, and orange");
+break;
+ }
 }
